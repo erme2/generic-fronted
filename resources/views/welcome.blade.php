@@ -9,13 +9,13 @@
         <link href="/css/app.css" rel="stylesheet">
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="/css/apple-touch-icon.png" sizes="180x180">
+        <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
         <link rel="icon" href="/images/icons/favicon-32x32.png" sizes="32x32" type="image/png">
         <link rel="icon" href="/images/icons/favicon-16x16.png" sizes="16x16" type="image/png">
         <link rel="icon" href="/images/icons/favicon.ico">
         <meta name="theme-color" content="#1d53b0">
     </head>
-    <body id="app">
+    <body>
         <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
         <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
@@ -121,7 +121,7 @@
 
                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-                <h2 id="vue_test">Section title</h2>
+                <h2 id="vue_test">@{{ message }}</h2>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -257,7 +257,7 @@
         <script>
             console.log('start');
             $('#jquery_test').html('jQuery Works');
-            new window.Vue({
+            new Vue({
                 el: '#vue_test',
                 data: {
                     message: "Vue is working :)"

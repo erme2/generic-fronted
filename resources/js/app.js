@@ -5,7 +5,13 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 // setting up Vue
-import Vue from 'vue';
-new Vue({
-    el: '#app',
+window.Vue = require('vue');
+
+// Vue.component('example-component', require('./components/component.vue'));
+
+const app = new Vue({
+    el: '#vue_test',
+    data: {
+        message: "vue is working :)"
+    }
 });

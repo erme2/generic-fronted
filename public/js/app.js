@@ -42154,17 +42154,19 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // setting up jQuery
 
 
 
 window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; // setting up Vue
 
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); // Vue.component('example-component', require('./components/component.vue'));
 
-new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
-  el: '#app'
+var app = new Vue({
+  el: '#vue_test',
+  data: {
+    message: "vue is working :)"
+  }
 });
 
 /***/ }),
@@ -42219,8 +42221,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /srv/rico/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /srv/rico/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Volumes/code/devApp/rico/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Volumes/code/devApp/rico/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
