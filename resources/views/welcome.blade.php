@@ -252,63 +252,8 @@
             </main>
         </div>
     </div>
-        <script src="/js/app.js"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         <script>
-            /* globals Chart:false, feather:false */
-
-            (function () {
-                'use strict'
-
-                feather.replace()
-
-                // Graphs
-                var ctx = document.getElementById('myChart')
-                // eslint-disable-next-line no-unused-vars
-                var myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: [
-                            'Sunday',
-                            'Monday',
-                            'Tuesday',
-                            'Wednesday',
-                            'Thursday',
-                            'Friday',
-                            'Saturday'
-                        ],
-                        datasets: [{
-                            data: [
-                                15339,
-                                21345,
-                                18483,
-                                24003,
-                                23489,
-                                24092,
-                                12034
-                            ],
-                            lineTension: 0,
-                            backgroundColor: 'transparent',
-                            borderColor: '#007bff',
-                            borderWidth: 4,
-                            pointBackgroundColor: '#007bff'
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: false
-                                }
-                            }]
-                        },
-                        legend: {
-                            display: false
-                        }
-                    }
-                })
-            }());
-
-            console.log('start');
             $('#jquery_test').html('jQuery Works');
             new Vue({
                 el: '#vue_test',
@@ -316,7 +261,24 @@
                     message: "Vue is working :)"
                 }
             });
-            console.log('end');
+            let ctx = document.getElementById('myChart');
+            let ctxData = {
+                type: 'line',
+                data: {
+                    labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                    datasets: [{
+                        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                        lineTension: 0,
+                        backgroundColor: 'transparent',
+                        borderColor: '#007bff',
+                        borderWidth: 4,
+                        pointBackgroundColor: '#007bff'
+                    }]
+                },
+                options: {scales: {yAxes: [{ticks: {beginAtZero: false}}]},legend: {display: false}}
+            };
+            console.log(ctx);
+            var myChart = new Chart(ctx, ctxData);
         </script>
     </body>
 </html>

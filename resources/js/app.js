@@ -2,6 +2,7 @@ require('./bootstrap');
 
 // setting up jQuery
 import $ from 'jquery';
+
 window.$ = window.jQuery = $;
 
 // setting up Vue
@@ -16,3 +17,7 @@ const app = new Vue({
 
 // feather
 const feather = require('feather-icons');
+feather.replace();
+
+// chart.js
+import 'chart.js';
