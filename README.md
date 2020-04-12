@@ -1,3 +1,3 @@
-# KOVALSKI
+# Kowalski
 
-![kovalski](public/images/kovalski.jpg)
+![kovalski](public/images/kowalski.jpg)
