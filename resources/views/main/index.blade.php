@@ -252,10 +252,8 @@
             </main>
         </div>
     </div>
-        <script src="/js/app.js"></script>
-        <script src="/js/dashboard.js"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         <script>
-            console.log('start');
             $('#jquery_test').html('jQuery Works');
             new Vue({
                 el: '#vue_test',
@@ -263,7 +261,24 @@
                     message: "Vue is working :)"
                 }
             });
-            console.log('end');
+            let ctx = document.getElementById('myChart');
+            let ctxData = {
+                type: 'line',
+                data: {
+                    labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                    datasets: [{
+                        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                        lineTension: 0,
+                        backgroundColor: 'transparent',
+                        borderColor: '#007bf1',
+                        borderWidth: 4,
+                        pointBackgroundColor: '#007bff'
+                    }]
+                },
+                options: {scales: {yAxes: [{ticks: {beginAtZero: false}}]},legend: {display: false}}
+            };
+            console.log(ctx);
+            var myChart = new Chart(ctx, ctxData);
         </script>
     </body>
 </html>
