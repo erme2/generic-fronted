@@ -1,3 +1,3 @@
-# RICO
+# KOVALSKI
 
-![Rico](public/images/rico.jpg)
+![kovalski](public/images/kovalski.jpg)
