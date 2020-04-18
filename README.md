@@ -1,5 +1,3 @@
-# Kowalski
+# Generic-Frontend
 
-![kowalski](public/images/kowalski.jpg)
-
-Just a dashobard to display data coming from an API system like [Rico](github.com/erme2/rico)
+Just a dashobard to display data coming from an API system like [Generic-API](https://github.com/erme2/generic-api)
